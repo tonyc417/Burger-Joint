@@ -21,6 +21,13 @@ var orm = {
             cb(result);
         });
 
+    },
+    updateOne: (table, cb) => {
+        var queryString = 'UPDATE ' + table + 'SET devoured = true WHERE id = ';
+        console.log(queryString);
+        connection.query(queryString, (err, res) => {
+            if (err) throw err;
+        })
     }
 
 }

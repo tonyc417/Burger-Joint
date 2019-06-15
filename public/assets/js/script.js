@@ -5,5 +5,11 @@ $("#submitBurger").on("click", (event) => {
         name: $("#burgerInput").val()
     };
 
-    $.ajax("")
+    $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+    }).then( () => {
+        console.log("New burger!")
+        location.reload();
+    })
 })
