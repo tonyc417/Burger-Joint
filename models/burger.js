@@ -6,8 +6,8 @@ var burger = {
             cb(res);
         });
     },
-    insert: (cols, vals, cb) => {
-        orm.insert()
+    insert: (name, cb) => {
+        orm.insert('burgers', name, cb);
     }
 };
 

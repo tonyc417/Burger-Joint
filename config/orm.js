@@ -11,14 +11,14 @@ var orm = {
             cb(result);
         });
     },
-    insert: (table, cols, vals, cb) => {
-        var queryString = `INSERT INTO ` + table + ` (burger_name, devoured)` ;
+    insert: (table, vals, cb) => {
+        var queryString = 'INSERT INTO ' + table + '(burger_name) VALUES (' + vals + ';' + '))' ;
         console.log("Insert one input: " + queryString);
-        connection.query(queryString, vals, (err, result) => {
+        connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
             }
-            cb(result)
+            cb(result);
         });
 
     }

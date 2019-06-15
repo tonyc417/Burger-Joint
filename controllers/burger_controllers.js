@@ -14,4 +14,10 @@ router.get("/", (req,res) => {
     })
 }); 
 
+router.post('/burgers/create', (req, res) => {
+    burger.insert(req.body.burger_name, (result) => {
+        res.redirect("/")
+    })
+})
+
 module.exports = router;
