@@ -24,7 +24,8 @@ var orm = {
     },
     updateOne: (table, cb) => {
         var queryString = 'UPDATE ' + table + 'SET devoured = true WHERE id = ';
-        console.log(queryString);
+        console.log("----------");
+        console.log("This is the update querystring: " + queryString);
         connection.query(queryString, (err, res) => {
             if (err) throw err;
         })
