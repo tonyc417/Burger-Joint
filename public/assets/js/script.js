@@ -1,6 +1,6 @@
 $("#submitBurger").on("click", (event) => {
     event.preventDefault();
-    
+    console.log("Working");
     var newBurger = {
         name: $("#burgerInput").val()
     };
